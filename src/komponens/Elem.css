@@ -1,0 +1,9 @@
+.elem{
+    width: 100px;
+    aspect-ratio: 1/1;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
