@@ -3,14 +3,16 @@ import "./Elem.css";
 
 export default function Elem(props) {
   const [style, setStyle] = useState({
-    backgroundColor: props.ertek ? 'green' : 'yellow'
+    backgroundColor: props.ertek ? 'green' : 'yellow',
+    transition: 'background-color 0.5s ease-in-out'
   });
 
   useEffect(() => {
-    const newStyle = {
-      backgroundColor: props.ertek ? 'green' : 'yellow'
-    };
-    setStyle(newStyle);
+    setStyle(prevStyle => ({
+      ...prevStyle,
+      backgroundColor: props.ertek ? 'green' : 'yellow',
+      transition: 'background-color 0.5s ease-in-out'
+    }));
   }, [props.ertek]);
 
   function katt() {
